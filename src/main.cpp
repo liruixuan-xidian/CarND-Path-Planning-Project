@@ -417,16 +417,28 @@ int main() {
                 double x_point = x_add_on+(target_x)/N;
                 double y_point = s(x_point);
                 x_add_on = x_point;
-
+                cout<<"first"<<endl;
+                cout<<"x_point "<<x_point<<endl;
+                cout<<"y_point "<<y_point<<endl;
+                cout<<endl;
                 double x_ref = x_point;
                 double y_ref = y_point;
+
 
                 x_point = (x_ref*cos(ref_yaw) - y_ref*sin(ref_yaw));
                 y_point = (x_ref*sin(ref_yaw) + y_ref*cos(ref_yaw));
 
+                cout<<"second"<<endl;
+                cout<<"x_point "<<x_point<<endl;
+                cout<<"y_point "<<y_point<<endl;
+                cout<<endl;
                 x_point += ref_x;
                 y_point += ref_y;
 
+                cout<<"third"<<endl;
+                cout<<"x_point "<<x_point<<endl;
+                cout<<"y_point "<<y_point<<endl;
+                cout<<endl;
                 next_x_vals.push_back(x_point);
                 next_y_vals.push_back(y_point);
             }
